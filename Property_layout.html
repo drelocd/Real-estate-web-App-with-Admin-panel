@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Property Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #00ffaa;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        .property-details {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-details img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            float: left;
+            margin: 0 15px 0 0;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+         /* Responsive styles */
+         @media (max-width: 600px) {
+            
+            header {
+                padding: 7.5px; /* Half of the original padding */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Include your header content here -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>REALMARK PROPERTIES</h1>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Include your navigation content here -->
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="properties.php">Properties</a></li>
+            <li><a href="blog.php">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="property-details">
+        <h1>Demo Property</h1>
+        <img src="images.jpg" alt="Profile Photo">
+        <div class="details">This is a demo Listing. Your Content will look like this in the public page.
+            A luxurious 4 bedroom flat Roof house.
+            Located approx 4Km off Thika Superhighway and 500m off the tamarc.
+            Gated Estate.
+            Close proximity to social amenities including Spur shopping mall, NIBS college, churches, Ruiru Town, shopping centres, CBD.
+            Features;
+            ✔️4 bedroom all ensuite
+            ✔️Spacious living room
+            ✔️ Dinning area
+            ✔️ Family room
+            ✔️Council water 
+            ✔️Sewer connected
+            ✔️ Security 24/7
+            ✔️Wall to wall wordrobes
+            ✔️ Document ready
+            ✔️ Mortgage Accepted</div>
+        <div class="location">Location: KAREN</div>
+        <div class="price">Price:  ksh 800k</div>
+        <div class="slideshow-container">
+            <div class="mySlides"><img src="placeholder_photo1.jpg"></div>
+            <div class="mySlides"><img src="placeholder_photo2.jpg"></div>
+            <div class="mySlides"><img src="placeholder_photo3.jpg"></div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            showSlides(slideIndex);
+        });
+    </script>
+
+</body>
+
+</html>

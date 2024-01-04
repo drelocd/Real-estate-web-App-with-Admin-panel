@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - RealMark</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('service3.jpeg'); /* Replace 'background-image.jpg' with your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #00ffaa;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-height: 80px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: justify;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 10px;
+            border-radius: 10px;
+            margin-bottom: 80px; /* Increased margin to accommodate the footer */
+        }
+
+        .job-listing {
+            margin-bottom: 20px;
+        }
+
+        .job-listing img {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure the footer stays on top */
+        }
+
+        #banner {
+            text-align: center;
+            background-color: rgb(243, 179, 18);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+            padding: 10px;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+            header {
+                padding: 7.5px; /* Half of the original padding */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+            }
+
+            .logo-container img {
+                max-width: 80%; /* Adjust the size of the smaller logo */
+            }
+            nav a {
+        padding: 10px 10px; /* Adjust the padding for smaller screens */
+        width: 100%;
+        box-sizing: border-box;
+    }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>REALMARK PROPERTIES</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="properties.php">Properties</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li class="active"><a href="careers.html">Careers</a></li>
+        </ul>
+    </nav>
+
+    <section class="job-listings">
+        <div class="job-listing">
+            <img src="driver.jpg" style="height:70px; width:70px;">
+            <h3>Driver</h3>
+            <p><b><u>Requirements</u></b></p>
+            <p>Minimum 5 years Experience</p>
+            <p>Valid Kenyan Drivers License</p>
+            <p>Basic First Aid Skills is an added advantage </p>
+            <p>High school diploma or equivalent.</p>
+            <p>Good physical health and ability to pass a pre-employment medical examination.</p>
+            <p>Consent to a background check to verify driving history and criminal record.</p>
+            <button onclick="location.href='job.html'">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <img src="caretaker.jpg" style="height:70px; width:70px;">
+            <h3>Caretakers</h3>
+            <p><b><u>Requirements</u></b></p>
+            <p>Certification as a caretaker or in property management.</p>
+            <p>Knowledge of landscaping and grounds maintenance</p>
+            <p>Previous experience as a caretaker</p>
+            <p>Ability to handle inquiries and address concerns professionally.</p>
+            <p>Basic administrative skills for record-keeping, filing, and documentation.</p>
+            <p>Basic knowledge of plumbing, electrical, and general maintenance tasks</p>
+            <p>Understanding of security procedures to ensure the safety of the property</p>
+            <button onclick="location.href='job.html'">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <img src="assistant.jpg" style="height:70px; width:70px;">
+            <h3>Office Assistants</h3>
+            <p><b><u>Requirements</u></b></p>
+            <p>High school diploma or equivalent</p>
+            <p>Additional certifications in office administration or related fields may be an advantage</p>
+            <p>Strong written and verbal communication skills</p>
+            <p>Familiarity with basic bookkeeping tasks, such as expense tracking and record-keeping</p>
+            <p>Maintain a professional appearance and conduct</p>
+            <p>Minimum 2 years Experience</p>
+            <button onclick="location.href='job.html'">Apply Now</button>
+        </div>
+
+        <div class="job-listing">
+            <img src="media.jpg" style="height:70px; width:70px;">
+            <h3>Social Media Manager</h3>
+            <p><b><u>Requirements</u></b></p>
+            <p>A bachelor's degree in marketing, communication, business, or a related field is preferred.</p>
+            <p>Proven work experience as a social media manager or in a similar role.</p>
+            <p>In-depth knowledge of major social media platforms, including Facebook, Twitter, Instagram, LinkedIn, and others.</p>
+            <p>Ability to create engaging and shareable content, including text, image, and video content.</p>
+            <p>Knowledge of SEO and online advertising.</p>
+            <p>Knowledge of legal and ethical considerations in social media marketing.</p>
+            <p>Relevant certifications in digital marketing or social media management are an added advantage.</p>
+            
+            <button onclick="location.href='job.html'">Apply Now</button>
+        </div>
+    </section>
+
+    <section id="banner">
+        Our company values, principles, and philosophy are the underlying foundation for how we work. We understand that
+        providing employees with an understanding of our values is key to success and allows everyone to be on the same
+        page regarding desired outcomes.
+
+        At RealMark, we believe that our values help to create a community focused culture that emphasizes collaboration,
+        understanding, and respect in the workplace. Each employee is made aware of the values during onboarding, with
+        periodic reminders that help ensure they continue to stay top of mind throughout their tenure at our company.
+
+        Ultimately, our goal as an organization is to make sure everyone is operating as efficiently and effectively as
+        possible by having access to the right tools and knowledge.
+    </section>
+
+    
+
+</body>
+
+</html>

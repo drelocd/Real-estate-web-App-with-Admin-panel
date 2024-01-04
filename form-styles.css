@@ -1,0 +1,73 @@
+/* form-styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Background color behind the form */
+}
+
+section {
+    padding: 20px;
+    background: url('logo.png') center/cover no-repeat; /* Replace 'your-background-image.jpg' with your image path */
+    color: #333;
+    background-size: 100%; /* Adjust as needed: cover, contain, or specific dimensions */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add more styles as needed for file inputs, etc. */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}

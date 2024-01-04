@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RealMark</title>
+    <link rel="stylesheet" href="header-nav-styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #00ffaa;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-height: 80px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            text-align: justify;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        .form-group button {
+            background-color: #00ffaa;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group button {
+                padding: 8px 16px;
+            }
+        
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+            header {
+                padding: 7.5px; /* Half of the original padding */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+            }
+            nav a {
+        padding: 10px 10px; /* Adjust the padding for smaller screens */
+        width: 100%;
+        box-sizing: border-box;
+    }
+            .logo-container img {
+                max-width: 80%; /* Adjust the size of the smaller logo */
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>REALMARK PROPERTIES</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="properties.php">Properties</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contact Us</h2>
+
+        <div class="contact-form">
+            <form id="contactForm" action="process_form.php" method="post">
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    
+                    <label for="inquiryType">Inquiry Type:</label>
+                    <select id="inquiryType" name="inquiryType" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="inquiry">Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Additional Contacts:</h3>
+            <p>Phone Number: +254 782553620</p>
+            <p>Website: <a href="https://www.realmark.co.ke">www.realmark.co.ke</a></p>
+        </div>
+    </section>
+
+</body>
+
+</html>

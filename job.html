@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="header-nav-styles.css">
+    <link rel="stylesheet" href="form-styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Realmark</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Add a background color for better visibility */
+        }
+
+        header {
+            background-color: #00ffaa;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label,
+        input,
+        select {
+            display: block;
+            margin-bottom: 10px;
+        }
+ /* Loading spinner styles */
+ #loading-spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .spinner {
+        border: 8px solid rgba(0, 0, 0, 0.3);
+        border-top: 8px solid #333;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media (max-width: 600px) {
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+            header {
+                padding: 7.5px; /* Half of the original padding */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+            }
+
+            .logo-container img {
+                max-width: 80%; /* Adjust the size of the smaller logo */
+            }
+            nav a {
+        padding: 10px 10px; /* Adjust the padding for smaller screens */
+        width: 100%;
+        box-sizing: border-box;
+    }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>REALMARK PROPERTIES</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="properties.php">Properties</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li class="active"><a href="job.html">Application</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <form id="jobApplicationForm" action="submit.php" method="post">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="" disabled selected>Select Location</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Eldoret">Eldoret</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="kraPin">KRA Pin:</label>
+            <input type="text" id="kraPin" name="kraPin" required maxlength="11">
+
+            <label for="idNumber">ID Number:</label>
+            <input type="text" id="idNumber" name="idNumber" required maxlength="8">
+
+            <label for="position">Position Applying For:</label>
+            <select id="position" name="position" required>
+                <option value="" disabled selected>Select Position</option>
+                <option value="Driver">Driver</option>
+                <option value="caretaker">Caretakers</option>
+                <option value="Cleaners">Cleaners</option>
+                <option value="Office Assistant">Office Assistant</option>
+                <option value="Security Guards">Security Guards</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="cv">CV (PDF or Word):</label>
+            <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+
+            <label for="resume">Resume (PDF or Word):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+            <label for="telephone">Safaricom Number: Must be 254XXXXXXXXX</label>
+            <input type="tel" id="telephone" name="telephone" pattern="^(?:254|\+254|0)?((?:(?:7(?:(?:[01249][0-9])|(?:5[789])|(?:6[89])))|(?:1(?:[1][0-5])))[0-9]{6})$" title="Please enter a valid Safaricom number" required maxlength="12" placeholder="254XXXXXXXXX">
+
+            <button type="button" onclick="submitApplication()">Submit Application</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Designed By Xploit1017.</p>
+    </footer>
+<!-- Add the following HTML for the loading spinner just above the closing </body> tag -->
+<div id="loading-spinner">
+    <div class="spinner"></div>
+</div>
+</body>
+
+</html>
